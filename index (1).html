@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WhyNY - Тіл үйрету орталығы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" class="calculator-screen" id="calculator-screen" disabled />
-        <div class="calculator-buttons">
-            <button class="btn" onclick="appendNumber('7')">7</button>
-            <button class="btn" onclick="appendNumber('8')">8</button>
-            <button class="btn" onclick="appendNumber('9')">9</button>
-            <button class="btn" onclick="chooseOperation('/')">/</button>
+    <header>
+        <h1>WhyNY (Why Not You?)</h1>
+        <p>Қытай және ағылшын тілдерін кәсіби үйрену</p>
+    </header>
 
-            <button class="btn" onclick="appendNumber('4')">4</button>
-            <button class="btn" onclick="appendNumber('5')">5</button>
-            <button class="btn" onclick="appendNumber('6')">6</button>
-            <button class="btn" onclick="chooseOperation('*')">*</button>
+    <nav>
+        <ul>
+            <li><a href="#">Басты бет</a></li>
+            <li><a href="#">Курстар</a></li>
+            <li><a href="#">Байланыс</a></li>
+        </ul>
+    </nav>
 
-            <button class="btn" onclick="appendNumber('1')">1</button>
-            <button class="btn" onclick="appendNumber('2')">2</button>
-            <button class="btn" onclick="appendNumber('3')">3</button>
-            <button class="btn" onclick="chooseOperation('-')">-</button>
+    <section id="about">
+        <h2>Біз туралы</h2>
+        <p>WhyNY – ағылшын және қытай тілдеріне кәсіби дайындық орталығы. Біз TOEFL және HSK емтихандарына дайындаймыз.</p>
+    </section>
 
-            <button class="btn" onclick="appendNumber('0')">0</button>
-            <button class="btn" onclick="appendNumber('.')">.</button>
-            <button class="btn" onclick="compute()">=</button>
-            <button class="btn" onclick="chooseOperation('+')">+</button>
+    <section id="courses">
+        <h2>Курстар</h2>
+        <ul>
+            <li>TOEFL дайындығы</li>
+            <li>HSK 1-6 деңгейлері</li>
+            <li>Жеке репетиторлық сабақтар</li>
+        </ul>
+    </section>
 
-            <button class="btn btn-clear" onclick="clearScreen()">C</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <section id="contact">
+        <h2>Байланыс</h2>
+        <p>Телефон: <a href="tel:+77763466674">+7 776 346 6674</a></p>
+        <p>WhatsApp: <a href="https://wa.me/77753829537">+7 775 382 9537</a></p>
+        <p>Email: <a href="mailto:WhyNotYou@mail.ru">WhyNotYou@mail.ru</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 WhyNY. Барлық құқықтар қорғалған.</p>
+    </footer>
 </body>
 </html>
