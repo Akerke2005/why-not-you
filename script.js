@@ -1,59 +1,47 @@
-let currentOperand = '';
-let previousOperand = '';
-let operation = null;
-
-const calculatorScreen = document.getElementById('calculator-screen');
-
-function appendNumber(number) {
-    if (number === '.' && currentOperand.includes('.')) return;
-    currentOperand = currentOperand.toString() + number.toString();
-    updateScreen();
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
-function chooseOperation(op) {
-    if (currentOperand === '') return;
-    if (previousOperand !== '') {
-        compute();
-    }
-    operation = op;
-    previousOperand = currentOperand;
-    currentOperand = '';
+header {
+    background-color: #ff6600;
+    color: white;
+    padding: 20px;
 }
 
-function compute() {
-    let computation;
-    const prev = parseFloat(previousOperand);
-    const current = parseFloat(currentOperand);
-    if (isNaN(prev) || isNaN(current)) return;
-    switch (operation) {
-        case '+':
-            computation = prev + current;
-            break;
-        case '-':
-            computation = prev - current;
-            break;
-        case '*':
-            computation = prev * current;
-            break;
-        case '/':
-            computation = prev / current;
-            break;
-        default:
-            return;
-    }
-    currentOperand = computation;
-    operation = null;
-    previousOperand = '';
-    updateScreen();
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #333;
+    margin: 0;
 }
 
-function clearScreen() {
-    currentOperand = '';
-    previousOperand = '';
-    operation = null;
-    updateScreen();
+nav ul li {
+    display: inline;
+    padding: 15px;
 }
 
-function updateScreen() {
-    calculatorScreen.value = currentOperand;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+   
